@@ -49,7 +49,6 @@
   text-align: center;
 }
 
-/* Box Styling */
 .box {
   background-color: #ffffff;
   border: 1px solid linear-gradient(to right, #4ade80, #3b82f6, #8b5cf6);
@@ -64,14 +63,12 @@
   animation: fadeIn 1s ease-in-out;
 }
 
-/* Icon Styling */
 .icon {
   font-size: 40px;
   color: #3b82f6;
   margin-bottom: 15px;
 }
 
-/* Gradient Heading */
 .box h2 {
   margin-bottom: 20px;
   font-size: 24px;
@@ -80,7 +77,6 @@
   -webkit-text-fill-color: transparent;
 }
 
-/* Input fields */
 .box input {
   width: 80%;
   padding: 13px;
@@ -90,7 +86,6 @@
   font-size: 14px;
 }
 
-/* Button */
 .box button {
   width: 85%;
   padding: 13px;
@@ -119,7 +114,6 @@
       font-size: 14px;
       margin-top: -10px;
     }
-/* Animation */
 @keyframes fadeIn {
   0% { opacity: 0; transform: translateY(-20px); }
   100% { opacity: 1; transform: translateY(0); }
@@ -171,14 +165,10 @@
       alert("Please enter a valid email address.");
       return false;
     }
-
-    // ✅ Check password length
     if (password.length < 8) {
       alert("Password must be at least 8 characters long.");
       return false;
     }
-
-    // ✅ Check password match
     if (password !== confirmPassword) {
       alert("Passwords do not match. Please type again.");
       return false;
