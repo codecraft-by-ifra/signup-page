@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Forget Password - SLSS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .box {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      width: 350px;
+      text-align: center;
+    }
+    .box input {
+      width: 90%;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    .box button {
+      background: linear-gradient(to right, #4ade80, #3b82f6, #8b5cf6);
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h2>Reset Password</h2>
+    <input type="email" id="resetEmail" placeholder="Enter your registered email" required>
+    <input type="password" id="newPassword" placeholder="Enter new password (min 8 chars)" required>
+    <button onclick="resetPassword()">Reset Password</button>
+  </div>
+
+  <script>
+    function resetPassword() {
+      const email = document.getElementById("resetEmail").value.trim();
+      const newPassword = document.getElementById("newPassword").value;
+
+      const storedEmail = localStorage.getItem("registeredEmail");
+
+      if (email !== storedEmail) {
+        alert("This email is not registered.");
+        return;
+      }
+
+      if (newPassword.length < 8) {
+        alert("Password must be at least 8 characters long.");
+        return;
+      }
+
+      // Update password
+      localStorage.setItem("registeredPassword", newPassword);
+      alert("Password reset successful. You can now login with the new password.");
+      window.location.href = "login.html"; // Redirect to login page
+    }
+  </script>
+</body>
+</html>

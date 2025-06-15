@@ -1,0 +1,108 @@
+/* ......................................splash screen........................,......... */
+
+/*..................................................... reg page ....................................................................................*/
+
+.two{
+   margin: 0;
+  padding: 0;
+  background-color: white;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+
+ 
+  background-image:url('background2.jpg');
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-container {
+  text-align: center;
+}
+
+/* Box Styling */
+.box {
+  background-color: #ffffff;
+  border: 1px solid linear-gradient(to right, #4ade80, #3b82f6, #8b5cf6);
+  width: 400px;
+  height: 400px;
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Icon Styling */
+.icon {
+  font-size: 40px;
+  color: #3b82f6;
+  margin-bottom: 15px;
+}
+
+/* Gradient Heading */
+.box h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  background: linear-gradient(to right, #4ade80, #3b82f6, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Input fields */
+.box input {
+  width: 80%;
+  padding: 13px;
+  margin: 12px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+/* Button */
+.box button {
+  width: 85%;
+  padding: 13px;
+  margin-top: 12px;
+  background: linear-gradient(to right, #4ade80, #3b82f6, #8b5cf6);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s ease;
+}
+
+.box button:hover {
+  opacity: 0.9;
+  transform: scale(1.03);
+}
+
+/* Forgot Password Link */
+.forgot {
+  margin-top: 12px;
+  display: block;
+  font-size: 14px;
+  color: #3b82f6;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.forgot:hover {
+  color: #1e40af;
+}
+.account{
+  color: grey;
+}
+.reg{
+  color: #3b82f6;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
