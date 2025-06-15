@@ -6,7 +6,6 @@ function loginUser() {
     const storedPassword = localStorage.getItem("registeredPassword");
 
    if (loginEmail === storedEmail && loginPassword === storedPassword) {
-      // ✅ Redirect to white home page
       window.location.href = "home.html";
     } else {
       alert("Invalid email or password.");
